@@ -1,0 +1,78 @@
+[NAME]
+name=palemoon-private
+
+[VERSION]
+version=0.1
+
+[RELEASE]
+release=0.mrx8
+
+[GROUP]
+group=Applications/Internet
+
+[DESCRIPTION]
+0=Menu shortcut and mageia9-palemoon:private container start file
+1=---
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2022
+
+[SUMMARY]
+summary=Menu shortcut and mageia9-palemoon:private container start file
+
+[URLCOPY]
+urlcopy=none
+
+[LICENSE]
+license=GPLv3+
+
+[DEPS]
+deps=
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=1
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=1
+
+[FILES]
+0=/usr/bin/palemoon-private
+1=/usr/share/applications/palemoon-private.desktop
+2=/usr/share/icons/palemoon-private.png
+
+[AFTERINSTALL]
+0=#ldconfig
+1=#update-desktop-database -q /usr/share/applications
+2=#update-mime-database /usr/share/mime
+3=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
+
+[AFTERREMOVE]
+0=#ldconfig
+1=#update-desktop-database -q /usr/share/applications
+2=#update-mime-database /usr/share/mime
+3=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
+
+[URL32]
+url32=
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=
+
+[DEVTOOL]
+devtool=
+
+[TOOLVERSION]
+toolversion=
