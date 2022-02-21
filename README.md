@@ -1,5 +1,5 @@
 # mageia9-palemoon:private
-Образ Docker для безопасного WEB-серфинга  
+Образ Docker для безопасного веб-серфинга  
 
 *Примечание: Для быстрого изготовления и запуска образа используйте [DockerManager](https://github.com/AKotov-dev/docker-manager)*
 
