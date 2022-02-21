@@ -21,7 +21,6 @@
 
 *Результат: приватное окно в интернет + безопасность + изоляция от основной ОС.*
 
-**Примеры запуска**
+**Дополнительные примеры запуска**
 1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri mageia9-palemoon:private`
-3. Из DockerManager (см. выше)
-4. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia9-palemoon-private/tree/main/palemoon-private-launcher)
+2. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia9-palemoon-private/tree/main/palemoon-private-launcher)
