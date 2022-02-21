@@ -23,4 +23,4 @@ Docker image for secure web surfing
 **Примеры запуска**
 1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri --device=/dev/snd mageia9-palemoon:private`
 2. Из DockerManager (см. выше)
-3. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка лаунчера из папки проекта (rpm/deb)
+3. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia9-palemoon-private/tree/main/palemoon-private-launcher)
