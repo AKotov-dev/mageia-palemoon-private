@@ -18,7 +18,7 @@ Docker image for secure web surfing.
 + двойной клик, вставить команду: `--rm --env="DISPLAY" --net=host --device=/dev/dri`
 + и нажать Ok
 
-*Результат: приватное окно в интернет + анонимность + изоляция от основной ОС + экономия ресурсов.*
+*Результат: приватное окно в интернет + безопасность + изоляция от основной ОС.*
 
 **Примеры запуска**
 1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri mageia9-palemoon:private`
