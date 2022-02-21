@@ -6,7 +6,7 @@ Docker image for secure web surfing
 **Изготовление образа mageia9-palemoon:private**
 1. ПКМ (таблица образов), Создать образ из Dockerfile
 2. Указать Новый образ: `mageia9-palemoon:tmp`
-3. Вставить содержимое Dockerfile и нажать Ок:
+3. Вставить содержимое [Dockerfile](https://github.com/AKotov-dev/mageia9-palemoon-private/blob/main/Dockerfile) и нажать Ок:
 4. Создан образ `mageia9-palemoon:tmp`
 + двойной клик, вставить команду: `--env="DISPLAY" --net=host --device=/dev/dri --device=/dev/snd`
 + откроется браузер Palemoon из контейнера, установить в нём
