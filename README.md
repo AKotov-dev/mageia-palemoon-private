@@ -1,10 +1,9 @@
 # mageia9-palemoon:private
 Docker image for secure web surfing
-
 Для быстрого изготовления и запуска образа используйте [DockerManager](https://github.com/AKotov-dev/docker-manager).
 
-Изготовление образа mageia9-palemoon:private
----
+
+**Изготовление образа mageia9-palemoon:private**
 1. ПКМ (таблица образов), Создать образ из Dockerfile
 2. Указать Новый образ: mageia9-palemoon:tmp
 3. Вставить содержимое Dockerfile и нажать Ок:
@@ -21,8 +20,7 @@ Docker image for secure web surfing
 
 Результат: приватное окно в интернет + анонимность + изоляция от основной ОС + экономия ресурсов.
 
-Примеры запуска:
----
+**Примеры запуска**
 1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri --device=/dev/snd mageia9-palemoon:private`
 2. Из DockerManager (см. выше)
 3. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка лаунчера из папки проекта (rpm/deb)
