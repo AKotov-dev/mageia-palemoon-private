@@ -24,3 +24,4 @@
 **Дополнительные примеры запуска**
 1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri mageia-palemoon:private`
 2. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia-palemoon-private/tree/main/palemoon-private-launcher)
+
