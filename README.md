@@ -1,5 +1,5 @@
 # mageia-palemoon:private
-Образ Docker для безопасного веб-серфинга  
+[Образ Docker для безопасного веб-серфинга](https://drive.google.com/drive/folders/1ekXmN1QdEJDFFnj_dWf0ATGKFK4nVMo7?usp=sharing)  
 
 *Примечание: для быстрого изготовления и запуска использовался [DockerManager](https://github.com/AKotov-dev/docker-manager)*
 
