@@ -7,7 +7,7 @@
 **Изготовление образа mageia-palemoon:private**
 1. ПКМ (таблица образов) -> Создать образ из Dockerfile
 2. Указать Новый образ: `mageia-palemoon:tmp`
-3. Вставить содержимое [Dockerfile](https://github.com/AKotov-dev/mageia9-palemoon-private/blob/main/Dockerfile) и нажать Ок:
+3. Вставить содержимое [Dockerfile](https://github.com/AKotov-dev/mageia-palemoon-private/blob/main/Dockerfile) и нажать Ок:
 4. Создан образ `mageia-palemoon:tmp`
 + двойной клик, вставить команду: `--env="DISPLAY" --net=host --device=/dev/dri`
 + откроется браузер Palemoon из контейнера, установить в нём
@@ -22,5 +22,5 @@
 *Результат: приватное окно в интернет + безопасность + изоляция от основной ОС.*
 
 **Дополнительные примеры запуска**
-1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri mageia9-palemoon:private`
-2. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia9-palemoon-private/tree/main/palemoon-private-launcher)
+1. Из терминала (su): `docker run --rm --env="DISPLAY" --net=host --device=/dev/dri mageia-palemoon:private`
+2. С Ярлыка `Меню-Интернет-Palemoon-Private (Docker)`; требуется установка [лаунчера](https://github.com/AKotov-dev/mageia-palemoon-private/tree/main/palemoon-private-launcher)
