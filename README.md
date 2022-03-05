@@ -1,5 +1,5 @@
-# mageia-palemoon:private
-Образ Docker для безопасного веб-серфинга  
+# akotovdev/mageia-palemoon:private
+Образ Docker для безопасного веб-серфинга.  
 
 *Примечание: для быстрого изготовления использовался [DockerManager](https://github.com/AKotov-dev/docker-manager)*  
   
