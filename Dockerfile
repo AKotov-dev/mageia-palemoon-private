@@ -9,5 +9,3 @@ echo -e '#!/bin/bash\n\n/usr/bin/tor --runasdaemon 1 --defaults-torrc \
 /palemoon && ./palemoon' > /start.sh && chmod 665 /start.sh
 
 CMD ["/bin/bash","-c","/start.sh"]
-
-
