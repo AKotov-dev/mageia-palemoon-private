@@ -2,16 +2,16 @@
 name=palemoon-private
 
 [VERSION]
-version=0.2
+version=0.3
 
 [RELEASE]
-release=0.mrx8
+release=0.mrx9
 
 [GROUP]
 group=Applications/Internet
 
 [DESCRIPTION]
-0=Menu shortcut and mageia-palemoon:private image start file
+0=Menu shortcut and 'akotovdev/mageia-palemoon:private' image start file
 
 [MAINTAINER]
 maintainer=Alex Kotov
@@ -20,7 +20,7 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2022
 
 [SUMMARY]
-summary=Menu shortcut and mageia-palemoon:private image start file
+summary=Menu shortcut and 'akotovdev/mageia-palemoon:private' image start file
 
 [URLCOPY]
 urlcopy=https://github.com/AKotov-dev/mageia-palemoon-private
@@ -29,7 +29,7 @@ urlcopy=https://github.com/AKotov-dev/mageia-palemoon-private
 license=GPLv3+
 
 [DEPS]
-deps=
+deps=docker zenity
 
 [META]
 meta=0
@@ -47,18 +47,49 @@ deb=1
 0=/usr/bin/palemoon-private
 1=/usr/share/applications/palemoon-private.desktop
 2=/usr/share/icons/palemoon-private.png
+3=/usr/share/doc/palemoon-private/
 
 [URL32]
-url32=
+url32=https://github.com/AKotov-dev/mageia-palemoon-private
 
 [URL64]
 url64=
 
 [PROGRAMNAME]
-programname=
+programname=mageia-palemoon:private
 
 [DEVTOOL]
-devtool=
+devtool=Shell
 
 [TOOLVERSION]
-toolversion=
+toolversion=unknown
+
+[INFO]
+0=Образ Docker для безопасного веб-серфинга
+1=
+2=Примечание: для быстрого изготовления использовался DockerManager
+3=
+4=Имя в DockerHub: akotovdev/mageia-palemoon:private
+5=Не забудьте включить пользователя в группу docker: usermod -aG docker $LOGNAME
+6=
+7=Изготовление образа akotovdev/mageia-palemoon:private
+8=
+9=ПКМ (таблица образов) -> Создать образ из Dockerfile
+10=Указать Новый образ: akotovdev/mageia-palemoon:tmp
+11=Вставить содержимое Dockerfile и нажать Ок:
+12=Создан образ akotovdev/mageia-palemoon:tmp
+13=двойной клик, вставить команду: --env="DISPLAY" --net=host --device=/dev/dri
+14=откроется браузер PaleMoon из контейнера, установить в нём
+15=прокси socks5: 127.0.0.1, порт 9050
+16=DNS через прокси socks5
+17=другие настройки, например стартовую страницу или темы + аддоны, очистить историю и закрыть браузер
+18=ПКМ (таблица контейнеров) на akotovdev/mageia-palemoon:tmp -> Создать образ akotovdev/mageia-palemoon:private
+19=Запустить образ akotovdev/mageia-palemoon:private
+20=двойной клик, вставить команду: --rm --env="DISPLAY" --net=host --device=/dev/dri
+21=и нажать Ok
+22=Результат: приватное окно в интернет + безопасность + изоляция от основной ОС.
+23=
+24=Дополнительные примеры загрузки/запуска
+25=
+26=Из терминала под юзером: docker run --rm --env="DISPLAY" --net=host --device=/dev/dri akotovdev/mageia-palemoon:private
+27=С Ярлыка Меню-Интернет-PaleMoon-Private (Docker); требуется установка лаунчера
