@@ -4,7 +4,7 @@
 *Примечание: для быстрого изготовления использовался [DockerManager](https://github.com/AKotov-dev/docker-manager)*  
   
 Имя в DockerHub: `akotovdev/mageia-palemoon:private`  
-Не забудьте включить пользователя в группу `docker`: `usermod -aG docker $LOGNAME`
+Не забудьте включить пользователя в группу `docker`: `usermod -aG docker $LOGNAME && reboot`
   
 **Изготовление образа akotovdev/mageia-palemoon:private**
 1. ПКМ (таблица образов) -> Создать образ из Dockerfile
