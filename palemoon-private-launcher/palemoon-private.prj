@@ -2,7 +2,7 @@
 name=palemoon-private
 
 [VERSION]
-version=0.4
+version=0.5
 
 [RELEASE]
 release=0.mrx9
@@ -12,6 +12,7 @@ group=Applications/Internet
 
 [DESCRIPTION]
 0=Menu shortcut and 'akotovdev/mageia-palemoon:private' image start file
+1=Local folder for uploading files from the container: ~/PP-Downloads
 
 [MAINTAINER]
 maintainer=Alex Kotov
