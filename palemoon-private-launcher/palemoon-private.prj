@@ -33,7 +33,7 @@ urlcopy=https://github.com/AKotov-dev/mageia-palemoon-private
 license=GPLv3+
 
 [DEPS]
-deps=docker zenity
+deps=docker zenity paprefs
 
 [META]
 meta=0
