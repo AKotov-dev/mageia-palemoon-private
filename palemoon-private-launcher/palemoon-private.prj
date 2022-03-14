@@ -11,8 +11,11 @@ release=0.mrx9
 group=Applications/Internet
 
 [DESCRIPTION]
-0=Menu shortcut and 'akotovdev/mageia-palemoon:private' image start file
-1=Local folder for uploading files from the container: ~/PP-Downloads
+0=1. Local folder for uploading files from the container: ~/PP-Downloads
+1=2. Turning on the sound under the user in terminal: paprefs -> NetworkServer
+2=+ Enable network access to local network devices
+3=+ Allow other machines on the network to use local audio devices
+4=+ Do not require authentication
 
 [MAINTAINER]
 maintainer=Alex Kotov
