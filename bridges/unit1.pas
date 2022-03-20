@@ -83,7 +83,7 @@ begin
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add(
-      'killall tor obfs4proxy; sleep 2; /usr/bin/tor --runasdaemon 0 ' +
+      'killall tor obfs4proxy; sleep 2; /usr/bin/tor --runasdaemon 1 ' +
       '--defaults-torrc /usr/share/defaults-torrc -f /etc/tor/torrc');
 
     //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];

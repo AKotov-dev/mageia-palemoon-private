@@ -133,11 +133,24 @@ begin
     S := TStringList.Create;
 
     if (RadioGroup1.ItemIndex = 0) or (Pos('obfs4', Memo1.Text) = 0) then
-      S.Add('SocksPort 9055')
+    begin
+      S.Add('SocksPort 9055');
+      S.Add('Exitpolicy reject *:*');
+      S.Add('Exitpolicy reject6 *:*');
+      S.Add('ExtORPort auto');
+      S.Add('LearnCircuitBuildTimeout 0');
+      S.Add('CircuitBuildTimeout 60');
+    end
     else
     begin
       S.Add('UseBridges 1');
       S.Add('SocksPort 9055');
+      S.Add('Exitpolicy reject *:*');
+      S.Add('Exitpolicy reject6 *:*');
+      S.Add('ExtORPort auto');
+      S.Add('LearnCircuitBuildTimeout 0');
+      S.Add('CircuitBuildTimeout 60');
+
       S.Add('');
       S.Add('ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy managed');
       for i := 0 to Memo1.Lines.Count - 1 do
