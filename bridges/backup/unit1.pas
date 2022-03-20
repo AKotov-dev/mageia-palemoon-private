@@ -55,7 +55,7 @@ begin
   try
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('ss -tulpn | grep 127.0.0.1:9050');
+    ExProcess.Parameters.Add('ss -tulpn | grep 127.0.0.1:9055');
 
     //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];
     ExProcess.Options := ExProcess.Options + [poUsePipes];
@@ -83,7 +83,7 @@ begin
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add(
-      'killall tor obfs4proxy; /usr/bin/tor --runasdaemon 1 ' +
+      'killall tor obfs4proxy; sleep 2; /usr/bin/tor --runasdaemon 0 ' +
       '--defaults-torrc /usr/share/defaults-torrc -f /etc/tor/torrc');
 
     //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];
@@ -133,21 +133,11 @@ begin
     S := TStringList.Create;
 
     if (RadioGroup1.ItemIndex = 0) or (Pos('obfs4', Memo1.Text) = 0) then
-    begin
-      S.Add('SocksPort 9055');
-      S.Add('Exitpolicy reject *:*');
-      S.Add('ExtORPort auto');
-      S.Add('LearnCircuitBuildTimeout 0');
-      S.Add('CircuitBuildTimeout 60');
-    end
+      S.Add('SocksPort 9055')
     else
     begin
       S.Add('UseBridges 1');
       S.Add('SocksPort 9055');
-      S.Add('Exitpolicy reject *:*');
-      S.Add('ExtORPort auto');
-      S.Add('LearnCircuitBuildTimeout 0');
-      S.Add('CircuitBuildTimeout 60');
       S.Add('');
       S.Add('ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy managed');
       for i := 0 to Memo1.Lines.Count - 1 do

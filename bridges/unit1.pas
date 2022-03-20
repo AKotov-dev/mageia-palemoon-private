@@ -83,7 +83,7 @@ begin
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add(
-      'killall tor obfs4proxy; /usr/bin/tor --runasdaemon 1 ' +
+      'killall tor obfs4proxy; sleep 2; /usr/bin/tor --runasdaemon 0 ' +
       '--defaults-torrc /usr/share/defaults-torrc -f /etc/tor/torrc');
 
     //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];
@@ -148,6 +148,7 @@ begin
       S.Add('ExtORPort auto');
       S.Add('LearnCircuitBuildTimeout 0');
       S.Add('CircuitBuildTimeout 60');
+
       S.Add('');
       S.Add('ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy managed');
       for i := 0 to Memo1.Lines.Count - 1 do
