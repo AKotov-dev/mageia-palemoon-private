@@ -1,10 +1,10 @@
 object MainForm: TMainForm
   Left = 292
-  Height = 106
+  Height = 116
   Top = 124
   Width = 486
   Caption = 'Bridges'
-  ClientHeight = 106
+  ClientHeight = 116
   ClientWidth = 486
   Font.Color = clGray
   OnCreate = FormCreate
@@ -13,7 +13,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = BitBtn1
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 69
+    Height = 79
     Top = 37
     Width = 486
     Align = alBottom
@@ -50,7 +50,7 @@ object MainForm: TMainForm
     Left = 3
     Height = 32
     Top = 2
-    Width = 245
+    Width = 216
     Anchors = [akTop, akLeft, akBottom]
     AutoFill = True
     BorderSpacing.Left = 3
@@ -62,7 +62,7 @@ object MainForm: TMainForm
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 2
     ClientHeight = 30
-    ClientWidth = 243
+    ClientWidth = 214
     Columns = 2
     ItemIndex = 0
     Items.Strings = (
@@ -88,5 +88,23 @@ object MainForm: TMainForm
     OnClick = BitBtn2Click
     ParentFont = False
     TabOrder = 1
+  end
+  object Shape1: TShape
+    AnchorSideLeft.Control = RadioGroup1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = RadioGroup1
+    AnchorSideTop.Side = asrCenter
+    Left = 224
+    Height = 12
+    Top = 12
+    Width = 12
+    BorderSpacing.Left = 5
+    Brush.Color = clYellow
+    Shape = stCircle
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 256
+    Top = 48
   end
 end

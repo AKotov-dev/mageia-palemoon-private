@@ -17,11 +17,16 @@ type
     BitBtn2: TBitBtn;
     Memo1: TMemo;
     RadioGroup1: TRadioGroup;
+    Shape1: TShape;
+    Timer1: TTimer;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure RadioGroup1Click(Sender: TObject);
     procedure RestartTor;
+    procedure Timer1Timer(Sender: TObject);
+    procedure TorPort;
+
   private
 
   public
@@ -36,6 +41,36 @@ implementation
 {$R *.lfm}
 
 { TMainForm }
+
+//Порт 9055 Tor (асинхронно)
+procedure TMainForm.TorPort;
+var
+  S: TStringList;
+  ExProcess: TProcess;
+begin
+  Application.ProcessMessages;
+  S := TStringList.Create;
+
+  ExProcess := TProcess.Create(nil);
+  try
+    ExProcess.Executable := 'bash';
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('ss -tulpn | grep 127.0.0.1:9050');
+
+    //  ExProcess.Options := ExProcess.Options + [poWaitOnExit];
+    ExProcess.Options := ExProcess.Options + [poUsePipes];
+    ExProcess.Execute;
+    S.LoadFromStream(ExProcess.Output);
+
+    // S.Text:=Trim(S.Text);
+    if S.Count <> 0 then Shape1.Brush.Color := clLime
+    else
+      Shape1.Brush.Color := clYellow;
+  finally
+    S.Free;
+    ExProcess.Free;
+  end;
+end;
 
 //Перезапуск tor с новыми настройками (асинхронно)
 procedure TMainForm.RestartTor;
@@ -56,6 +91,11 @@ begin
   finally
     ExProcess.Free;
   end;
+end;
+
+procedure TMainForm.Timer1Timer(Sender: TObject);
+begin
+  TorPort;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
