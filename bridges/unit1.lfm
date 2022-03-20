@@ -1,10 +1,10 @@
 object MainForm: TMainForm
   Left = 292
-  Height = 116
+  Height = 106
   Top = 124
   Width = 486
   Caption = 'Bridges'
-  ClientHeight = 116
+  ClientHeight = 106
   ClientWidth = 486
   Font.Color = clGray
   OnCreate = FormCreate
@@ -13,7 +13,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = BitBtn1
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 79
+    Height = 69
     Top = 37
     Width = 486
     Align = alBottom
@@ -23,20 +23,6 @@ object MainForm: TMainForm
     Font.Color = clSilver
     Font.Height = -12
     Font.Name = 'Sans'
-    Lines.Strings = (
-      'obfs4 45.79.239.161:80 C1EC6138FC438AA97AFC8C8819FB175507186C48 cert=ZqsYXkOpShJZuyxpNMrGI5k/sACYpbH3C7ChpY7nXdYre3ToYYZYlfG7LzTFSmYxNIW0SA iat-mode=0'
-      'obfs4 185.177.207.66:12346 1880F1A582C482A2704D0747654CFF0A2095FD6C cert=p9L6+25s8bnfkye1ZxFeAE4mAGY7DH4Gaj7dxngIIzP9BtqrHHwZXdjMK0RVIQ34C7aqZw iat-mode=2'
-      'obfs4 92.194.103.241:42935 DE131D27860718A95CF691948BC36FA16187DB2B cert=D3++fMxl72GBW+/IyVBBDy8EIWSqy1jlO6xA10N6nsdOLlpQLvNSbY26jw9J3yKYiRG4Dg iat-mode=0'
-      'obfs4 185.177.207.168:8443 A87E255E1999B4986E38D6C153F8304FCFD542EE cert=B9lcTGmehjfJOL6Kf1TDV+HhayAuII0+LQXykuUikL9jtIHDBOcmlLKlnRh+XXoOkNFqbg iat-mode=0'
-      'obfs4 95.216.205.148:443 7E29ADE109E2C6A189C281A48CA07E5843CE6FF2 cert=uKreq8e6SUR/SycWDnMw3vTSH8xkWzImyWVhBqfdVN03JzFLfoogiQF1aWdxyn6bRvGqZA iat-mode=0'
-      'obfs4 94.103.85.8:34002 D60DAD63C0D01FB7D0FCC8FB516FDED8D0361F29 cert=SOGjNZZGdjbddIzztHbX85ii5OPu4RoLZ3SRaC7CxZJhNRuNxYuGxzyQt0AMCGhpT02kEg iat-mode=0'
-      'obfs4 185.177.207.168:8443 A87E255E1999B4986E38D6C153F8304FCFD542EE cert=B9lcTGmehjfJOL6Kf1TDV+HhayAuII0+LQXykuUikL9jtIHDBOcmlLKlnRh+XXoOkNFqbg iat-mode=0'
-      'obfs4 95.216.205.148:443 7E29ADE109E2C6A189C281A48CA07E5843CE6FF2 cert=uKreq8e6SUR/SycWDnMw3vTSH8xkWzImyWVhBqfdVN03JzFLfoogiQF1aWdxyn6bRvGqZA iat-mode=0'
-      'obfs4 94.103.85.8:34002 D60DAD63C0D01FB7D0FCC8FB516FDED8D0361F29 cert=SOGjNZZGdjbddIzztHbX85ii5OPu4RoLZ3SRaC7CxZJhNRuNxYuGxzyQt0AMCGhpT02kEg iat-mode=0'
-      'obfs4 185.177.207.168:8443 A87E255E1999B4986E38D6C153F8304FCFD542EE cert=B9lcTGmehjfJOL6Kf1TDV+HhayAuII0+LQXykuUikL9jtIHDBOcmlLKlnRh+XXoOkNFqbg iat-mode=0'
-      'obfs4 95.216.205.148:443 7E29ADE109E2C6A189C281A48CA07E5843CE6FF2 cert=uKreq8e6SUR/SycWDnMw3vTSH8xkWzImyWVhBqfdVN03JzFLfoogiQF1aWdxyn6bRvGqZA iat-mode=0'
-      'obfs4 94.103.85.8:34002 D60DAD63C0D01FB7D0FCC8FB516FDED8D0361F29 cert=SOGjNZZGdjbddIzztHbX85ii5OPu4RoLZ3SRaC7CxZJhNRuNxYuGxzyQt0AMCGhpT02kEg iat-mode=0'
-    )
     ParentFont = False
     TabOrder = 3
     WordWrap = False
