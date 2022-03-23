@@ -80,6 +80,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
       </Unit>
+      <Unit>
+        <Filename Value="pingtrd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PingTRD"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
